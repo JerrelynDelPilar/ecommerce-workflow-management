@@ -59,7 +59,7 @@ app.use("/b2/cart", cartRoutes);
 app.use("/b2/orders", orderRoutes);
 
 if(require.main === module){
-	app.listen(process.env.PORT || port, '0.0.0.0', () => console.log(`Server running at port ${process.env.PORT || port}`));
+	app.listen(process.env.PORT || port () => console.log(`Server running at port ${process.env.PORT || port}`));
 }
 
 module.exports = {app,mongoose};
