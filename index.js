@@ -30,8 +30,6 @@ app.use(express.json());
 // Allows your app to read data from forms
 app.use(express.urlencoded({extended:true}));
 
-const port = 3000;
-
 // You can also customize the CORS options to meet your specific requirements
 const corsOptions = {
 	// Allow request from this origin (the client's URL) the origin is in array form if there are multiple origins
