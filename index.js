@@ -58,8 +58,12 @@ app.use("/b2/products", productRoutes);
 app.use("/b2/cart", cartRoutes);
 app.use("/b2/orders", orderRoutes);
 
+const port = process.env.PORT || 4002;
+
 if(require.main === module){
-	app.listen(process.env.PORT || port () => console.log(`Server running at port ${process.env.PORT || port}`));
+	app.listen(port, ()=> {
+	  console.log(ˋServer is running at port ${port}ˋ);
+	});
 }
 
 module.exports = {app,mongoose};
